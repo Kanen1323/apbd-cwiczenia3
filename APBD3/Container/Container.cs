@@ -1,4 +1,4 @@
-﻿namespace APBD3;
+﻿namespace APBD3.Conatiner;
 
 public class Container : IContainer
 {
@@ -20,7 +20,7 @@ public class Container : IContainer
 
    public void Load(double sad)
    {
-       throw new NotImplementedException();
+       throw new OverfillException();
    }
 }
 
