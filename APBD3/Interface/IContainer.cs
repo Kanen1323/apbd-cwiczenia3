@@ -1,4 +1,4 @@
-﻿    namespace APBD3;
+﻿    namespace APBD3.Interface;
 
     public interface IContainer
     {
@@ -7,12 +7,12 @@
         int Height { get; }
      
          
-        int Weight_Of_Container { get; }
+        int WeightOfContainer { get; }
         int Depth { get; }
         
-        int Max_Weight { get; }
+        int MaxWeight { get; }
 
-        String type { get; }
+        String Type { get;}
 
         String NumberCreate(String type);
         
