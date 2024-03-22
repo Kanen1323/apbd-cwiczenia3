@@ -1,9 +1,11 @@
-﻿    namespace APBD3.Interface;
+﻿    using APBD3.Container;
+
+    namespace APBD3.Interface;
 
     public interface IContainer
     {
 
-        int Weight { get; }
+       int Weight { get; set; }
         int Height { get; }
      
          
@@ -13,10 +15,16 @@
         int MaxWeight { get; }
 
         String Type { get;}
+        String number { get;}
 
         String NumberCreate(String type);
-        
-        
+
+
+        void Emptying();
+
+        void Loading(int weight,Liquid liquid);
+
+
 
 
 

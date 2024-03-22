@@ -2,11 +2,11 @@
 
 public class OverfillException : Exception
 {
-    public OverfillException()
+    public OverfillException(): base("You want to insert more than the container can hold")
     {
     }
 
-    public OverfillException(string? message) : base("Error")
+    public OverfillException(string? message) : base("You want to insert more than the container can hold")
     {
     }
 
