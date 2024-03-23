@@ -18,4 +18,6 @@ container1.print_information();
 RefrigeratedContainers possibleProducts =
     new RefrigeratedContainers(12, 100, 100, 100, 1000, 1000, PossibleProducts.Bananas);
 
-possibleProducts.Loading(100,PossibleProducts.Bananas);
+RefrigeratedContainers possibleProducts1 =
+    new RefrigeratedContainers(15.3, 100, 100, 100, 1000, 1000, PossibleProducts.Bananas);
+    possibleProducts1.print_information();
