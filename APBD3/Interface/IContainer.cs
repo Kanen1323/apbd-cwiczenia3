@@ -22,8 +22,8 @@
 
         void Emptying();
 
-        void Loading(int weight,Liquid liquid);
-
+        void Loading(int weight);
+   
 
 
 

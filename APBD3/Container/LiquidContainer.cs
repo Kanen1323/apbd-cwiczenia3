@@ -47,17 +47,13 @@ public class LiquidContainer : IContainer, IHazardNotifier
 
     }
 
-    public void Loading(int weight, Liquid liquid)
+   
+
+    public void Loading(int weight)
     {
 
 
-        if (liquid!=_liquid)
-        {
-            if (Weight==0)
-                throw new LiquidsException();
-           
-
-        }
+        
         if (!(Weight+weight<=MaxWeight))
             throw new OverfillException();
 
