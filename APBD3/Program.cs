@@ -9,8 +9,8 @@ LiquidContainer container3 = new LiquidContainer(100, 100, 100, 100, 10000,Liqui
 Console.WriteLine(container1.number);
 Console.WriteLine(container2.number);
 Console.WriteLine(container3.number);
-container1.Loading(100,Liquid.Milk);
+container1.Loading(100);
 
 
-container2.Loading(450,Liquid.Petrol);
+container2.Loading(450);
 

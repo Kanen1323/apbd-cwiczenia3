@@ -23,7 +23,9 @@
         void Emptying();
 
         void Loading(int weight);
-   
+
+        void print_information();
+
 
 
 

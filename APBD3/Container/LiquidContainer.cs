@@ -82,10 +82,11 @@ public class LiquidContainer : IContainer, IHazardNotifier
 
     public void SendNotification(string message)
     {
-        Console.WriteLine(message);
+        
+        throw new OverfillException(message);
     }
 
-    public bool Hazardousness()
+ bool Hazardousness()
     {
         if (_liquid==Liquid.Petrol)
         {
@@ -94,5 +95,12 @@ public class LiquidContainer : IContainer, IHazardNotifier
 
         return false;
 
-    } 
+    }
+
+   public void print_information()
+    {
+        
+        
+        
+    }
 }
