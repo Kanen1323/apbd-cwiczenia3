@@ -12,7 +12,7 @@ public class GasContainer : IContainer, IHazardNotifier
         Depth = depth;
         MaxWeight = maxWeight;
         SubjectOfPressure = subjectOfPressure;
-         Type = "Liquid";
+         Type = "Gaz";
         number = NumberCreate(Type);
     }
 
@@ -62,7 +62,8 @@ public class GasContainer : IContainer, IHazardNotifier
     
     public void print_information()
     {
-        Console.WriteLine("Maximum container weight" + MaxWeight  + ". The container is loaded to " + Weight  + ". Container type " + Type + " .  Container height " + Height + " . Weight of the container itself " + WeightOfContainer + ". Container depth " + Depth  + " . Serial number of the container "  + number + " Subject of pressure "  + SubjectOfPressure);
+        Console.WriteLine("Maximum container weight" + MaxWeight  + ". The container is loaded to " + Weight  + ". Container type " + Type + " .\n " +
+                          "Container height " + Height + " . Weight of the container itself " + WeightOfContainer + ". Container depth " + Depth  + " . Serial number of the container "  + number + " Subject of pressure "  + SubjectOfPressure);
         
         
     }

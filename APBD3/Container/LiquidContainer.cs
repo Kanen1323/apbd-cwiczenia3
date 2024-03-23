@@ -97,9 +97,10 @@ public class LiquidContainer : IContainer, IHazardNotifier
 
     }
 
-   public void print_information()
+    public void print_information()
     {
-        
+        Console.WriteLine("Maximum container weight" + MaxWeight  + ". The container is loaded to " + Weight  + ". Container type " + Type + " .\n" + 
+                            "Container height " + Height + " . Weight of the container itself " + WeightOfContainer + ". Container depth " + Depth  + " . Serial number of the container "  + number);
         
         
     }

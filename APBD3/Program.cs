@@ -10,7 +10,12 @@ Console.WriteLine(container1.number);
 Console.WriteLine(container2.number);
 Console.WriteLine(container3.number);
 container1.Loading(100);
+container1.print_information();
 
 
-container2.Loading(450);
 
+
+RefrigeratedContainers possibleProducts =
+    new RefrigeratedContainers(12, 100, 100, 100, 1000, 1000, PossibleProducts.Bananas);
+
+possibleProducts.Loading(100,PossibleProducts.Bananas);
