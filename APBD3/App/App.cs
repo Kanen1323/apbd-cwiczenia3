@@ -16,7 +16,7 @@ public class App
         Console.WriteLine("2-Information about containers");
         Console.WriteLine("3-Add Ship");
         Console.WriteLine("4-Create standard container");
-      
+        Console.WriteLine("5-Delete Container");
         
             switch (Console.ReadLine())
         {
@@ -63,20 +63,20 @@ public class App
                
                Start();  
             break;
-            
-            
-            
+            case "5":
+                Console.WriteLine("Write number for delete");
+                string number = Console.ReadLine();
+                IContainer container= _containers[int.Parse(number)];
+                _containers.RemoveAt(int.Parse(number));  
+                Console.WriteLine("Container " + container.number + " was deleted");
+                Start();
+                
+                break;
+
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            
+
+
     }
 
 

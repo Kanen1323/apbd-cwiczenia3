@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\apbd-cwiczenia3\\APBD3\\APBD3.csproj",
+      "projectUniqueName": "D:\\C#\\apbd-cwiczenia\\APBD3\\APBD3.csproj",
       "projectName": "APBD3",
-      "projectPath": "D:\\C#\\apbd-cwiczenia3\\APBD3\\APBD3.csproj",
+      "projectPath": "D:\\C#\\apbd-cwiczenia\\APBD3\\APBD3.csproj",
       "packagesPath": "C:\\Users\\safar\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\apbd-cwiczenia3\\APBD3\\obj\\",
+      "outputPath": "D:\\C#\\apbd-cwiczenia\\APBD3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\safar\\AppData\\Roaming\\NuGet\\NuGet.Config"
