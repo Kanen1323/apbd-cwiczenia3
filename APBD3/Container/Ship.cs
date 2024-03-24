@@ -17,25 +17,42 @@ public  class Ship
   private int _maxContainers;
   private double _maxWeight;
   private double Weight;
+  private int number;
 
   public Ship(int maxContainers, double maxWeight)
   {
     _maxContainers = maxContainers;
     _maxWeight = maxWeight;
+    number++;
   }
 
   public override string ToString()
   {
-    return "Ship has " + _containers.Count + " containers with height " + Weight;
+   
+    if (_containers !=null)
+    {
+     
+      return "Ship has " + _containers.Count + " containers with height " + Weight;
+    }
+    else
+    {
+  3
+      return "Ship " + number + " are free";
+    }
+
   }
 
   public void Loading()
   {
 
+
+    if (_maxContainers < _containers.Count)
+      throw new ShipException("You have loaded the maximum number of containers");
+
     foreach (var container in _containers)
     {
     
-      if (Weight+container.Weight<_maxWeight)
+      if (Weight+container.Weight<_maxWeight*1000)
       {
         Weight += container.Weight;
       }
@@ -45,6 +62,20 @@ public  class Ship
       }
     }
     
+  }
+
+  public void Add(IContainer container)
+  {
+    
+    if (Weight+container.Weight<_maxWeight)
+    {
+      Weight += container.Weight;
+    }
+    else
+    {
+      throw new ShipException();
+    }
+    _containers.Add(container);
     
   }
   

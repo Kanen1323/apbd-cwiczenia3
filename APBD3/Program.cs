@@ -22,6 +22,10 @@ RefrigeratedContainers possibleProducts =
 RefrigeratedContainers possibleProducts1 =
     new RefrigeratedContainers(15.3, 100, 100, 100, 1000, 1000, PossibleProducts.Bananas);
     possibleProducts1.print_information();
-    
+    Ship ship = new Ship(100, 100);
+Console.WriteLine(ship.ToString());
     App app = new App();
+
     app.Start();
+
+  

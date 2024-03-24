@@ -59,7 +59,7 @@ public class LiquidContainer : IContainer, IHazardNotifier
 
         if (_dangerouse)
         {
-            if (Weight+weight>=MaxWeight/2)
+            if (Weight+weight>=MaxWeight/2.0)
             {
                 SendNotification("Is trying to perform an unsafe action for the container number " + number + ". Someone wants to fill the container with hazardous substances by more than 50%");
                 return;
@@ -68,7 +68,7 @@ public class LiquidContainer : IContainer, IHazardNotifier
         }
         else
         {
-            if (Weight+weight>=MaxWeight-MaxWeight/10)
+            if (Weight+weight>=MaxWeight-MaxWeight/2.0)
             {
                 SendNotification("Is trying to perform an unsafe action for the container number " + number + ". Someone wants to fill the container with substances by more than 90%");
                 return;
@@ -104,4 +104,5 @@ public class LiquidContainer : IContainer, IHazardNotifier
         
         
     }
+    
 }
