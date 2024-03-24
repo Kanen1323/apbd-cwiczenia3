@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using APBD3.Container;
+using APBD3.App;
 
 LiquidContainer container1 = new LiquidContainer(100, 100, 100, 100, 1000,Liquid.Milk);
 LiquidContainer container2 = new LiquidContainer(100, 100, 100, 100, 1000,Liquid.Petrol);
@@ -21,3 +22,6 @@ RefrigeratedContainers possibleProducts =
 RefrigeratedContainers possibleProducts1 =
     new RefrigeratedContainers(15.3, 100, 100, 100, 1000, 1000, PossibleProducts.Bananas);
     possibleProducts1.print_information();
+    
+    App app = new App();
+    app.Start();

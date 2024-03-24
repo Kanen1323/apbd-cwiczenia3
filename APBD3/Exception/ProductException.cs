@@ -12,5 +12,6 @@ public class ProductException : Exception
 
     public ProductException(string? message, Exception? innerException) : base(message, innerException)
     {
+        
     }
 }

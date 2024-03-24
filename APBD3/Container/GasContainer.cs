@@ -16,7 +16,7 @@ public class GasContainer : IContainer, IHazardNotifier
         number = NumberCreate(Type);
     }
 
-    public int Weight { get; set; }
+    public double Weight { get; set; }
     public int Height { get; }
     public int WeightOfContainer { get; }
     public int Depth { get; }

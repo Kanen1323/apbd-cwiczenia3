@@ -6,8 +6,8 @@ namespace APBD3.Container;
 
 public class LiquidContainer : IContainer, IHazardNotifier
 {
-   public int Weight { get;set; }
-    public int Height { get; set; }
+   public double Weight { get;set; }
+    public int Height { get;  }
     public int WeightOfContainer { get; }
     public int Depth { get; }
     public int MaxWeight { get; }

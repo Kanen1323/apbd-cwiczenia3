@@ -5,7 +5,7 @@
     public interface IContainer
     {
 
-       int Weight { get; set; }
+       double Weight { get; set; }
         int Height { get; }
      
          

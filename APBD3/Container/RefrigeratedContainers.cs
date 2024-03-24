@@ -4,7 +4,7 @@ namespace APBD3.Container;
 
 public class RefrigeratedContainers : IContainer
 {
-    public int Weight { get; set; }
+    public double Weight { get; set; }
     public int Height { get; }
     public int WeightOfContainer { get; }
     public int Depth { get; }
@@ -86,22 +86,17 @@ public class RefrigeratedContainers : IContainer
         _hashmap.Add(PossibleProducts.Sausages,5);
         _hashmap.Add(PossibleProducts.Butter,20.5);
         _hashmap.Add(PossibleProducts.Eggs,19);
-        
-        
-        
-        
-        
     }
 
     public void CheckTemperature()
     {
-        foreach (var Key in _hashmap.Keys)
+        foreach (var key in _hashmap.Keys)
         {
            
-            if (Key==Products)
+            if (key==Products)
             {
                
-                if (!(_hashmap[Key]-2<=_temperature && _hashmap[Key]+2>=_temperature) )
+                if (!(_hashmap[key]-2<=_temperature && _hashmap[key]+2>=_temperature) )
                 {
                     throw new TemperatureException(
                         "The temperature of your container differs by more than two degrees from the permissible temperature");
@@ -109,8 +104,6 @@ public class RefrigeratedContainers : IContainer
             }
             
         }
-        
-        
     }
     
 }
