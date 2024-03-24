@@ -10,16 +10,16 @@ public class LiquidContainer : IContainer, IHazardNotifier
     public int Height { get;  }
     public int WeightOfContainer { get; }
     public int Depth { get; }
-    public int MaxWeight { get; }
+    public double MaxWeight { get; }
     public string Type { get; }
     public  String number { get;}
     
     private static int _count ;
 
     private static Liquid _liquid;
-    private bool _dangerouse;
+    private bool _dangerous;
 
-    public LiquidContainer(int weight, int height, int weightOfContainer, int depth, int maxWeight, Liquid liquid)
+    public LiquidContainer(double weight, int height, int weightOfContainer, int depth,double  maxWeight, Liquid liquid)
     {
         Weight = weight;
         Height = height;
@@ -29,7 +29,7 @@ public class LiquidContainer : IContainer, IHazardNotifier
         Type = "Liquid";
         number = NumberCreate(Type);
         _liquid = liquid;
-        _dangerouse = Hazardousness();
+        _dangerous = Hazardousness();
     }
 
     public string NumberCreate(string type)
@@ -57,7 +57,7 @@ public class LiquidContainer : IContainer, IHazardNotifier
         if (!(Weight+weight<=MaxWeight))
             throw new OverfillException();
 
-        if (_dangerouse)
+        if (_dangerous)
         {
             if (Weight+weight>=MaxWeight/2.0)
             {
@@ -65,7 +65,7 @@ public class LiquidContainer : IContainer, IHazardNotifier
                 return;
 
             }
-        }
+        } 
         else
         {
             if (Weight+weight>=MaxWeight-MaxWeight/2.0)
@@ -104,5 +104,11 @@ public class LiquidContainer : IContainer, IHazardNotifier
         
         
     }
-    
+
+    public override string ToString()
+    {
+        return "Maximum container weight" + MaxWeight  + ". The container is loaded to " + Weight  + ". Container type " + Type + " .\n" + 
+               "Container height " + Height + " . Weight of the container itself " + WeightOfContainer + ". Liquid " + _liquid +". Container depth "
+               + Depth  + " . Serial number of the container "  + number;
+    }
 }

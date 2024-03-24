@@ -8,7 +8,7 @@ public class RefrigeratedContainers : IContainer
     public int Height { get; }
     public int WeightOfContainer { get; }
     public int Depth { get; }
-    public int MaxWeight { get; }
+    public double MaxWeight { get; }
     public string Type { get; }
     public string number { get; }
 
@@ -17,7 +17,7 @@ public class RefrigeratedContainers : IContainer
     private double _temperature;
     private static int _count ;
 
-    public RefrigeratedContainers(double temperature, int weight, int height, int weightOfContainer, int depth, int maxWeight, PossibleProducts products)
+    public RefrigeratedContainers(double temperature, double weight, int height, int weightOfContainer, int depth, double maxWeight, PossibleProducts products)
     {
         Temperature();
         _temperature = temperature;

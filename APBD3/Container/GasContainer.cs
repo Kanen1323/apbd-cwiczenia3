@@ -4,7 +4,7 @@ namespace APBD3.Container;
 
 public class GasContainer : IContainer, IHazardNotifier
 {
-    public GasContainer(int weight, int height, int weightOfContainer, int depth, int maxWeight, int subjectOfPressure)
+    public GasContainer(double weight, int height, int weightOfContainer, int depth, double maxWeight, int subjectOfPressure)
     {
         Weight = weight;
         Height = height;
@@ -20,7 +20,7 @@ public class GasContainer : IContainer, IHazardNotifier
     public int Height { get; }
     public int WeightOfContainer { get; }
     public int Depth { get; }
-    public int MaxWeight { get; }
+    public double MaxWeight { get; }
     public string Type { get; }
     public string number { get; }
     private int _count;

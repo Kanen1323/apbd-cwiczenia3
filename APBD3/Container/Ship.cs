@@ -12,18 +12,19 @@ public  class Ship
     _containers = containers;
     _maxContainers = maxContainers;
     _maxWeight = maxWeight;
+ 
   }
 
   private int _maxContainers;
   private double _maxWeight;
   private double Weight;
-  private int number;
+ 
 
   public Ship(int maxContainers, double maxWeight)
   {
     _maxContainers = maxContainers;
     _maxWeight = maxWeight;
-    number++;
+   
   }
 
   public override string ToString()
@@ -36,8 +37,8 @@ public  class Ship
     }
     else
     {
-  3
-      return "Ship " + number + " are free";
+
+      return "Ship are free";
     }
 
   }

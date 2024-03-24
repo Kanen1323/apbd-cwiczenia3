@@ -12,7 +12,7 @@
         int WeightOfContainer { get; }
         int Depth { get; }
         
-        int MaxWeight { get; }
+        double MaxWeight { get; }
 
         String Type { get;}
         String number { get;}
