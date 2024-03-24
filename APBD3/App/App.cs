@@ -40,13 +40,7 @@ public class App
                 Start();
                 break;
             case "3":
-                Console.WriteLine("MaxConeiners");
-                
-                int maxConeiners = int.Parse(Console.ReadLine());
-                Console.WriteLine("MaxWeight");
-                int maxWeight = int.Parse(Console.ReadLine());
-                Ship ship = new Ship(maxConeiners, maxWeight);
-                _ships.Add(ship);
+               CreateShip();
                 Start();
                 break;
             case "4":
@@ -64,7 +58,7 @@ public class App
                 }
                 else
                 {
-                    
+                    CreateRefrigerated(100,100,0,80,100);
                 }
                
                Start();  
@@ -89,13 +83,7 @@ public class App
     public void CreateLiquid(double weight, int height, int weightOfContainer, int depth,double  maxWeight)
     {
         
-        Console.WriteLine("choice which type of container");
-        Console.WriteLine("0-Liquid Container");
-        Console.WriteLine("1-Gas Container");
-        Console.WriteLine("2-Refrigerated Container");
-        string choice = Console.ReadLine();
-        if (choice=="1")
-        {
+    
             Console.WriteLine("choice which type of Liquid");
             Console.WriteLine("1-Milk");
             Console.WriteLine("2-Petrol");
@@ -109,7 +97,7 @@ public class App
                 _containers.Add(new LiquidContainer(weight,height,weightOfContainer,depth,maxWeight,Liquid.Petrol));
             }
                 
-        }
+        
 
         
         
@@ -182,6 +170,19 @@ public class App
 
         }
         _containers.Add(new RefrigeratedContainers(temperature,weight,height,weightOfContainer,depth,maxWeight,selectedProduct));
+    }
+
+    public void CreateShip()
+    {
+        
+        Console.WriteLine("MaxConeiners");
+                
+        int maxConeiners = int.Parse(Console.ReadLine());
+        Console.WriteLine("MaxWeight");
+        int maxWeight = int.Parse(Console.ReadLine());
+        Ship ship = new Ship(maxConeiners, maxWeight);
+        _ships.Add(ship);
+        
     }
     
 }
