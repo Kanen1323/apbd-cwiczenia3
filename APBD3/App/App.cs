@@ -55,6 +55,8 @@ public class App
                 break;
             case "6":
                LoadingShip();
+               Start();
+                   
                 break;
 
         }
@@ -204,11 +206,16 @@ public class App
 
     public void LoadingShip()
     {
-        Console.WriteLine("Write number for delete");
+        Console.WriteLine("Write number for Ship");
         string number = Console.ReadLine();
+        int num = int.Parse(number);
         for (int i = 0; i < _containers.Count; i++)
         {
-            _ships[int.Parse(number)].Add(_containers[i]);
+            Console.WriteLine("Write number for Ship");
+            Console.WriteLine(_containers[i].ToString());
+            Console.WriteLine(_ships[num].ToString());
+            Console.WriteLine("Write number for Ship");
+            _ships[num].Add(_containers[i]);
         }
     }
     

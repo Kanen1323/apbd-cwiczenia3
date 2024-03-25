@@ -24,7 +24,8 @@ public  class Ship
   {
     _maxContainers = maxContainers;
     _maxWeight = maxWeight;
-   
+    _containers = new List<IContainer>();
+
   }
 
   public override string ToString()
