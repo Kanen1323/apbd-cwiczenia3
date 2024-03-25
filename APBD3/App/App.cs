@@ -17,6 +17,8 @@ public class App
         Console.WriteLine("3-Add Ship");
         Console.WriteLine("4-Create standard container");
         Console.WriteLine("5-Delete Container");
+        Console.WriteLine("6-Add some in container");
+        
         
             switch (Console.ReadLine())
         {
@@ -44,33 +46,15 @@ public class App
                 Start();
                 break;
             case "4":
-                Console.WriteLine("Which type of container?");
-                Console.WriteLine("1-Liquid");
-                Console.WriteLine("2-Gas");
-                Console.WriteLine("3-Refrigreted");
-                string choice = Console.ReadLine();
-                if (choice=="1")
-                {
-                    CreateLiquid(100,100,0,80,100);
-                }else if (choice=="2")
-                {
-                    CreateGas(100,100,0,80,100,20);
-                }
-                else
-                {
-                    CreateRefrigerated(100,100,0,80,100);
-                }
-               
-               Start();  
+              CreateContainer();
+              Start();
             break;
             case "5":
-                Console.WriteLine("Write number for delete");
-                string number = Console.ReadLine();
-                IContainer container= _containers[int.Parse(number)];
-                _containers.RemoveAt(int.Parse(number));  
-                Console.WriteLine("Container " + container.number + " was deleted");
+           DeleteCOntainer();
                 Start();
-                
+                break;
+            case "6":
+               LoadingShip();
                 break;
 
         }
@@ -183,6 +167,49 @@ public class App
         Ship ship = new Ship(maxConeiners, maxWeight);
         _ships.Add(ship);
         
+    }
+
+    public void DeleteCOntainer()
+    {
+            Console.WriteLine("Write number for delete");
+            string number = Console.ReadLine();
+        IContainer container= _containers[int.Parse(number)];
+        _containers.RemoveAt(int.Parse(number));  
+        Console.WriteLine("Container " + container.number + " was deleted");
+        
+    }
+
+    public void CreateContainer()
+    {
+        Console.WriteLine("Which type of container?");
+        Console.WriteLine("1-Liquid");
+        Console.WriteLine("2-Gas");
+        Console.WriteLine("3-Refrigreted");
+        string choice = Console.ReadLine();
+        if (choice=="1")
+        {
+            CreateLiquid(100,100,0,80,100);
+        }else if (choice=="2")
+        {
+            CreateGas(100,100,0,80,100,20);
+        }
+        else
+        {
+            CreateRefrigerated(100,100,0,80,100);
+        }
+               
+        
+        
+    }
+
+    public void LoadingShip()
+    {
+        Console.WriteLine("Write number for delete");
+        string number = Console.ReadLine();
+        for (int i = 0; i < _containers.Count; i++)
+        {
+            _ships[int.Parse(number)].Add(_containers[i]);
+        }
     }
     
 }
